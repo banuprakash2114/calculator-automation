@@ -12,31 +12,32 @@ public class CalculatorPage {
         this.driver = driver;
     }
 
+    // Dynamic digit locator: digit(1), digit(2), etc.
     public WebElement digit(int n) {
-        return driver.findElement(By.id("com.motorola.cn.calculator:id/digit_" + n));
+        return driver.findElement(By.id(Locators.DIGIT + n));
     }
 
     public WebElement plusButton() {
-        return driver.findElement(By.id("com.motorola.cn.calculator:id/op_add"));
+        return driver.findElement(By.id(Locators.PLUS));
     }
 
     public WebElement minusButton() {
-        return driver.findElement(By.id("com.motorola.cn.calculator:id/op_sub"));
+        return driver.findElement(By.id(Locators.MINUS));
     }
 
     public WebElement multiplyButton() {
-        return driver.findElement(By.id("com.motorola.cn.calculator:id/op_mul"));
+        return driver.findElement(By.id(Locators.MULTIPLY));
     }
 
     public WebElement divideButton() {
-        return driver.findElement(By.id("com.motorola.cn.calculator:id/op_div"));
+        return driver.findElement(By.id(Locators.DIVIDE));
     }
 
     public WebElement equalsButton() {
-        return driver.findElement(By.id("com.motorola.cn.calculator:id/eq"));
+        return driver.findElement(By.id(Locators.EQUALS));
     }
 
     public WebElement result() {
-        return driver.findElement(By.id("com.motorola.cn.calculator:id/formula_or_result"));
+        return driver.findElement(By.id(Locators.RESULT));
     }
 }
